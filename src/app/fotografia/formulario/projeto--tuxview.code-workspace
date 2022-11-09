@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../../../projeto---tuxview"
+		},
+		{
+			"path": "../../../../.angular"
+		},
+		{
+			"path": "../../../../.vscode"
+		},
+		{
+			"path": "../../../../node_modules"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../TuxView"
+		}
+	],
+	"settings": {}
+}
