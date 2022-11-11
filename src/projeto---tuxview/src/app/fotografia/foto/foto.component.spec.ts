@@ -5,7 +5,7 @@ import { FotoComponent } from './foto.component';
 describe('FotoComponent', () => {
   let component: FotoComponent;
   let fixture: ComponentFixture<FotoComponent>;
- 
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ FotoComponent ]

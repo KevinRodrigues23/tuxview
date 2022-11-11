@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
-import { FormularioComponent } from "./fotografia/formulario/formulario.component";
+import { FormularioComponent } from "./fotografia/formulario/FormularioComponent";
 import { HomeComponent } from "./fotografia/home/home.component";
 import { FotoComponent } from "./fotografia/foto/foto.component";
 
