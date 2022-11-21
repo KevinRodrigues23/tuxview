@@ -1,0 +1,33 @@
+
+<br><br>
+<div class="formulario">
+<div class="col-4">
+    <div class="card shadow mt-5">
+        <div class="cartao">
+        <div class="card-body">
+<form #formulario ="ngForm" (ngSubmit)="validar('Parabéns, formulário validado com sucesso')"    class="row g-3">
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Digite o endereço da imagem</label>
+      <input type="text" class="form-control" id="inputAddress" name="img" placeholder="minhaimagem.com.br" required ngModel>
+    </div>
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Digite o titulo da image</label>
+      <input type="text" class="form-control" id="inputAddress2" name="titulo" placeholder="Título da imagem" required ngModel>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck" name="checkbox" required ngModel>
+        <label class="form-check-label" for="gridCheck">
+         Marque essa opção
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary" [disabled]="!formulario.valid">{{btnValidar}}</button>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>

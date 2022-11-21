@@ -1,11 +1,10 @@
 
 //Decorar a classe - Utilizar um decorator
 //Decorarator diz a função da classe
-
-import { HttpClient } from "@angular/common/http";
 import { Component } from "@angular/core";
 
 import { Fotos } from './foto';
+import { DatabaseService } from '../../service/database.service';
 
 @Component({
     selector: 'app-foto',
@@ -14,6 +13,7 @@ import { Fotos } from './foto';
 })
 
 export class FotoComponent{
+
   nameButton = "Fotos Pares";
   titulo = "Minhas Fotos";
   control = true;
@@ -24,27 +24,38 @@ export class FotoComponent{
   //O metodo contrutor de toda classe é carregada junto com o componente
   //HttpCLient é a ferramenta utilizada para conectar ao banco de dados(json-server(db.json))
   //Ela tambem permite fazer todo o crud
-  //Injeção de dependencia(HttpCLient) - Que é disponiilizar a ferrammenta denttorro dos () do constru
+  //Injeção de dependencia - Que é disponiilizar a ferrammenta dentro dos () do constru
   
-  constructor(private joao: HttpClient){
-    //Metodo get() pega algo
-    joao.get<Fotos[]>('http://localhost:3000/fotos').subscribe(caixa => this.imagens = caixa)    
-  }
+  constructor(private database: DatabaseService){}
 
+  ngOnInit(){
+   
+    try{
 
-  //Método do botao de click
-  mudar(){
+      this.database.getFoto().subscribe(caixa => this.imagens = caixa); 
+    
+    }catch(error){
 
-    this.control = !this.control;
-
-    if(this.nameButton == "Todas Imagens" ){
-      this.nameButton = "Fotos Pares"
-    }else{
-      this.nameButton = "Todas Imagens";
+      console.log(error);
     }
+      
+    
   }
 
+  //Metodo deletar - Apaga uma foto em nossa web api
   deletar(id:number){
-    console.log(id);
+
+   try{
+
+    this.database.delFoto(id);
+
+   }catch(error){
+
+    console.log(error);
+    
+   }
+   
   }
+
+  mudar(){}
 }

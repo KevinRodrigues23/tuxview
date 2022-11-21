@@ -6,9 +6,6 @@ import { FotoComponent } from "./foto/foto.component";
 import { FormularioComponent } from "./formulario/formulario.component";
 import { InicioComponent } from "./inicio/inicio.component";
 
-
-
-
 @NgModule({
     //Determina quais componentes são de responsabilidade do modulo
     declarations: [

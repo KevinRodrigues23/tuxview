@@ -1,18 +1,16 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { DatabaseService } from 'src/app/service/database.service';
 
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css']
 })
-export class FormularioComponent implements OnInit {
-  //Vou contratar um tradutor - httpOptions
-  httpOptions = {
-    headers: new HttpHeaders({'Content-Type' : 'application/json'})
-  };
 
+export class FormularioComponent implements OnInit {
+  
   nameButton = "Cadastrar";
 
   //A ferramenta formgroup captura as informações 
@@ -20,20 +18,21 @@ export class FormularioComponent implements OnInit {
   formulario!: FormGroup; 
 
   //Injeção de dependencia - 
-  //O constructor da classe sera somente para injeção de dependecia
-  
+  //O constructor da classe sera somente para injeção de dependecia  
   constructor(
     private formBuilder: FormBuilder,
-    private http: HttpClient
+    private database: DatabaseService
     ){}
 
   //Ciclo de vida do Angular
   //Executar codigo no inicio, no meio ou no final da aplicação
   //ngOnInit - carrega todo codigo dentro dele no inicio da noassa APP
   ngOnInit(): void {
+    //Carrega o metodo junto com o componente
     this.validaForm();
   }
 
+  //Método de validação do formulario
   validaForm(){
     this.formulario = this.formBuilder.group({
       img: ['', [Validators.required, Validators.minLength(5)]],
@@ -44,7 +43,7 @@ export class FormularioComponent implements OnInit {
   //Método usado no formGroup (data driven)
   //JSON.stringify converte os dados para o formato json
   cadastro(){    
-   this.http.post('http://localhost:3000/fotos/',JSON.stringify(this.formulario.value), this.httpOptions).subscribe();
+   this.database.postFoto(this.formulario.value);
   }
 
   //Todo método pode ou não receber um parametro

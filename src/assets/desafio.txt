@@ -1,12 +1,31 @@
-Desafio Aula 11: 
-    Configurar o botão excluir para chamar um método deletar
-    Configurar o método deletar para excluir uma foto na Web API
+Atividade: Projeto
+    Desenvolver uma Aplicação em Angular
+    Tema: Livre
+    
+    Recursos utilizar: 
+        componentes do angular
+        Data Binding
+        Eevnt Binding
+        Modulos
+        Serviços
+        Json-server
 
-    Irão precisar: 
-        -> httpclient
-        -> httpoptions
-        -> capturar o id da foto(ja feito)
-        -> O id da foto precisa ser passado para o metodo deletar
+Desafio no projeto: 
+    Ja estamos fazendo consulta, cadastro e exclusão. Falta somente a operação de
+    Atualização dos dados.
+    O desafio pesquisar e criar a atualização dos dados.
 
+Comandos :
+    Criação do projeto:  ng new nome_projeto
+    Criação de componentes: ng generate component nome_componente
+    Criação de módulos: ng generate module nome_modulo
+    Criação de interfaces: ng generate interface nome_interface
+    Colocar o projeto no ar: ng serve --open
 
-Data de Entrega 16/11/2022
+Instalação do Bootstrap no projeto: 
+    Passo 01: Acessar a pasta do nosso projeto ANGULAR: 
+    Passo 02: Executar pelo o seguinte comando:  npm install bootstrap --save
+    Passo 03: Dentro do arquivo angular.json, 
+              Adicionar a seguinte linha dentro da opção style:
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    Passo 04: Reiniciar o servidor Angular

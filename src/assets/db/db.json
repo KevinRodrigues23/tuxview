@@ -1,34 +1,19 @@
 {
   "fotos": [
     {
-      "id": 1,
-      "img": "https://cdn.pixabay.com/photo/2022/10/07/09/06/bridge-7504605__340.jpg",
-      "titulo": "Ponte"
+      "img": "https://cdn.pixabay.com/photo/2022/02/06/15/58/squirrel-6997505__340.jpg",
+      "titulo": "Esquilo",
+      "id": 9
     },
     {
-      "id": 2,
-      "img": "https://cdn.pixabay.com/photo/2022/10/05/20/43/hyacinth-macaw-7501470__340.jpg",
-      "titulo": "Arara"
+      "img": "https://cdn.pixabay.com/photo/2022/11/09/15/37/black-naped-oriole-7580879__340.jpg",
+      "titulo": "Pasarion",
+      "id": 10
     },
     {
-      "id": 3,
-      "img": "https://cdn.pixabay.com/photo/2022/10/05/20/43/hyacinth-macaw-7501470__340.jpg",
-      "titulo": "Arara"
-    },
-    {
-      "id": 4,
-      "img": "https://cdn.pixabay.com/photo/2022/10/05/20/43/hyacinth-macaw-7501470__340.jpg",
-      "titulo": "Arara"
-    },
-    {
-      "img": "https://cdn.pixabay.com/photo/2022/11/08/21/15/cliffs-7579330__340.jpg",
-      "titulo": "Linda PAisagem",
-      "id": 5
-    },
-    {
-      "img": "https://cdn.pixabay.com/photo/2022/11/06/13/36/architecture-7574031__340.jpg",
-      "titulo": "Torre",
-      "id": 6
+      "img": "https://cdn.pixabay.com/photo/2021/04/16/05/55/leaves-6182624__340.jpg",
+      "titulo": "Folha",
+      "id": 11
     }
   ]
 }
